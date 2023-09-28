@@ -13,6 +13,9 @@ provider:
         - https://merchant-staging.solanapay.com
         - https://pay.solanapay.com
         - https://pay-staging.solanapay.com
+        - https://merchant-staging.solanapay.com
+        - https://merchant.heliofi.xyz
+        - https://pay.heliofi.xyz
       allowedHeaders:
         - Content-Type
         - Authorization
