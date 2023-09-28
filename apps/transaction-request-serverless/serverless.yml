@@ -7,6 +7,7 @@ provider:
   environment:
     RPC_URL: ${env:RPC_URL}
     SENTRY_DSN: ${env:SENTRY_DSN}
+  region: eu-west-1
 functions:
   pay:
     handler: src/handlers/pay.pay

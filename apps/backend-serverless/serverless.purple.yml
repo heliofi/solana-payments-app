@@ -32,7 +32,7 @@ provider:
             - s3:GetObject
           Resource: 'arn:aws:s3:::${self:custom.gas-bucket-name}/${self:custom.gas-object-name}'
   stage: ${opt:stage, 'dev'}
-  region: us-east-1
+  region: eu-west-1
   environment:
     SHOPIFY_SECRET_KEY: ${env:SHOPIFY_SECRET_KEY}
     SHOPIFY_CLIENT_ID: ${env:SHOPIFY_CLIENT_ID}
@@ -581,8 +581,8 @@ custom:
     httpPort: 4000
     lambdaPort: 4001
     websocketPort: 4009
-  gas-bucket-name: gas-bucket-${self:provider.stage}
-  single-use-bucket-name: single-use-key-pair-bucket-${self:provider.stage}
+  gas-bucket-name: gas-key-bucket-${self:provider.stage}
+  single-use-bucket-name: single-use-keypair-bucket-${self:provider.stage}
   gas-object-name: 'gas-kp.json'
   prune:
     automatic: true

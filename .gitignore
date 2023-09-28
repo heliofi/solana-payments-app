@@ -56,5 +56,6 @@ working-notes.md
 !.yarn/sdks/*
 !.yarn/versions/*
 
+**/gas-kp.json
 
 **.pid

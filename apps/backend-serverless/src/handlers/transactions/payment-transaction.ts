@@ -119,7 +119,7 @@ export const paymentTransaction = Sentry.AWSLambda.wrapHandler(
             const trmService = new TrmService();
 
             try {
-                await trmService.screenAddress(account);
+                // await trmService.screenAddress(account);
             } catch (error) {
                 let rejectionReason = PaymentSessionStateRejectedReason.processingError;
 

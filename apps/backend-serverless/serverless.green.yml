@@ -17,6 +17,7 @@ provider:
     SENTRY_DSN: ${env:SENTRY_DSN}
     SENTRY_RELEASE: ${env:SENTRY_RELEASE}
     COIN_GECKO_API_KEY: ${env:COIN_GECKO_API_KEY}
+  region: eu-west-1
 package:
   patterns:
     - 'node_modules/.prisma/**'
