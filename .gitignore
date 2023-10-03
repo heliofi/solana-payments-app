@@ -59,3 +59,8 @@ working-notes.md
 **/gas-kp.json
 
 **.pid
+**/**.pem
+**/**.key
+**/**.key
+**/**.csr
+

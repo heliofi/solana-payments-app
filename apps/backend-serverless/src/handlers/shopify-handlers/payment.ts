@@ -19,12 +19,19 @@ Sentry.AWSLambda.init({
     tracesSampleRate: 1.0,
     integrations: [new Sentry.Integrations.Prisma({ client: prisma })],
 });
-
 export const payment = Sentry.AWSLambda.wrapHandler(
     async (event: APIGatewayProxyEventV2): Promise<APIGatewayProxyResultV2> => {
+        Sentry.captureEvent({
+          message: '/payment',
+          level: 'info',
+          extra: {
+            event,
+          },
+        });
         const paymentRecordService = new PaymentRecordService(prisma);
         const merchantService = new MerchantService(prisma);
         const paymentUiUrl = process.env.PAYMENT_UI_URL;
+
 
         if (paymentUiUrl == null) {
             return createErrorResponse(new MissingEnvError('payment ui url'));

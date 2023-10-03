@@ -63,6 +63,12 @@ functions:
       - httpApi:
           path: /error
           method: get
+  health:
+    handler: src/handlers/testing/health.health
+    events:
+      - httpApi:
+          path: /health
+          method: get
 
 plugins:
   - serverless-plugin-optimize
